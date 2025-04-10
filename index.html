@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Airline Ticket Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">Airline Booking</div>
+        <nav>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#flight ">Flights</a></li>
+                <li><a href="#offer">Offers</a></li>
+                <li><a href="#support">Support</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li>
+                    <div class="login-dropdown">
+                      <button class="login-btn">Login / Sign Up</button>
+                      <div class="dropdown-content">
+                        <a href="login.html">Login</a>
+                        <a href="signup.html">Sign Up</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id = "home" class="hero">
+        <h1>Find Your Perfect Flight</h1>
+        <p>Search, Compare & Book Cheap Airline Tickets</p>
+
+        <!-- Flight Search Bar -->
+        <div class="search-box">
+            <input type="text" placeholder="From" id="from">
+            <input type="text" placeholder="To" id="to">
+            <input type="date" id="departure">
+            <input type="date" id="return">
+            <select id="passengers">
+                <option>1 Passenger</option>
+                <option>2 Passengers</option>
+                <option>3 Passengers</option>
+            </select>
+            <select id="class">
+                <option>Economy</option>
+                <option>Business</option>
+                <option>First Class</option>
+            </select>
+            <button onclick="searchFlights()">Search Flights</button>
+        </div>
+    </section>
+
+    <!-- Flight Offers Section -->
+    <section id ="offer" class="flight-offers">
+    <h2>Special Flight Offers</h2>
+    <div class="offer-cards">
+
+        <div class="offer-card" data-link="offer1.html">
+            <img src="Image1.png" alt="Offer1">
+            <div class="offer-details">
+                <h4>INTL FLIGHTS</h4>
+                <p>Get up to 30% OFF* with DBS on Flights, Hotels, Holidays</p>
+                <span>Expires <strong>21 Apr 25</strong></span>
+            </div>
+        </div>
+
+        <div class="offer-card" data-link="offer2.html">
+            <img src="Image2.png" alt="Offer2">
+            <div class="offer-details">
+                <h4>DOM FLIGHTS</h4>
+                <p>Grab up to 15% OFF* Flight & Hotels. @ MakeMyTrip!</p>
+                <span>Expires <strong>1 May Jun 25</strong></span>
+            </div>
+        </div>
+
+        <div class="offer-card" data-link="offer3.html">
+            <img src="Image3.png" alt="Offer3">
+            <div class="offer-details">
+                <h4>INTL FLIGHTS</h4>
+                <p>Instant Discount up to Rs. 5000 OFF* with HDFC EMI</p>
+                <span>Expires <strong>20 Apr 25</strong></span>
+            </div>
+        </div>
+
+        <div class="offer-card" data-link="offer4.html">
+            <img src="Image4.png" alt="offer4">
+            <div class="offer-details">
+                <h4>DOM FLIGHTS</h4>
+                <p>Instant Discount up to Rs. 5000 OFF* with SBI EMI</p>
+                <span>Expires <strong>28 Apr 25</strong></span>
+            </div>
+        </div>
+
+        <div class="offer-card" data-link="offer5.html">
+            <img src="Image5.png" alt="offer5">
+            <div class="offer-details">
+                <h4>DOM FLIGHTS</h4>
+                <p>Instant Discount up to Rs. 5000 OFF* with AXIS EMI</p>
+                <span>Expires <strong>30 Apr 25</strong></span>
+            </div>
+        </div>
+
+        <div class="offer-card" data-link="offer6.html">
+            <img src="Image6.png" alt="offer6">
+            <div class="offer-details">
+                <h4>INTL FLIGHTS</h4>
+                <p>Instant Discount up to Rs. 5000 OFF* with AMAZON PAY</p>
+                <span>Expires <strong>25 Apr 25</strong></span>
+            </div>
+        </div>
+
+    </div>
+    </section>
+
+  <!-- Flagship Hotel Stores -->
+  <section id="support" class="flight-flagship">
+  <h2>Flagship Hotel Stores</h2>
+  <div class="card-section">
+    <div class="card" data-link="Tamara.html">
+      <img src="Photo1.png" alt="Tamara" />
+      <div class="card-title">Tamara Hotels</div>
+    </div>
+    <div class="card" data-link="CGH Earth.html">
+      <img src="Photo2.png" alt="CGH Earth" />
+      <div class="card-title">CGH Earth Experience</div>
+    </div>
+    <div class="card" data-link="Palazzo.html" >
+      <img src="Photo3.png" alt="Palazzo" />
+      <div class="card-title">Palazzo Versace Hotel</div>
+    </div>
+  </div>
+  </section>
+
+  <!-- WHERE2GO -->
+  <section  id ="flight" class="flight-WHERE2GO">
+  <h2>WHERE2GO</h2>
+  <div class="card-section">
+    <div class="card" data-link="Beach.html">
+      <img src="Snap1.png" alt="Beach" />
+      <div class="card-title">Relax on the Beach</div>
+    </div>
+    <div class="card" data-link="Mountains.html">
+      <img src="Snap2.png" alt="Mountains" />
+      <div class="card-title">Getaways to the Mountains</div>
+    </div>
+    <div class="card" data-link="Honeymoon.html">
+      <img src="Snap3.png" alt="Honeymoon" />
+      <div class="card-title">Honeymoon Hotspots</div>
+    </div>
+  </div>
+ </section>
+
+    <!-- Featured Destinations -->
+    <section class="destinations">
+        <h2>Featured Destinations</h2>
+        <div class="destination-list">
+            <div class="destination-card" data-link="Paris.html">
+                <img src="Img1.png" alt="Paris">
+                <p>Paris, France</p>
+            </div>
+            <div class="destination-card" data-link="Dubai.html">
+                <img src="Img2.png" alt="Dubai">
+                <p>Dubai, UAE</p>
+            </div>
+            <div class="destination-card" data-link="New York.html">
+                <img src="Img3.png" alt="New York">
+                <p>New York, USA</p>
+            </div>
+        </div>
+    </section>
+
+
+     <!-- Customer Reviews -->
+     <section class="reviews">
+      <h2>What Our Customers Say</h2>
+      <div class="reviews-container">
+        <div class="review-card">
+          <p>"Amazing service! Booking was easy and smooth."</p>
+          <span>- Alex</span>
+        </div>
+        <div class="review-card">
+          <p>"Great deals and very user-friendly experience!"</p>
+          <span>- Sarah</span>
+        </div>
+        <div class="review-card">
+          <p>"Support team helped me reschedule quickly."</p>
+          <span>- Michael</span>
+        </div>
+        <div class="review-card">
+          <p>"Very reliable and quick confirmations."</p>
+          <span>- Priya</span>
+        </div>
+      </div>
+    </section>
+    
+    
+
+
+    <!-- Footer with Contact -->
+<footer class="footer-section">
+    <div id = "contact" class="footer-contact">
+      <h2>Contact Us</h2>
+      <p>If you have any questions or need support, feel free to reach out to us!</p>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Airline Booking. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <script src="script.js">
+
+const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+  </script>
+</body>
+</html>
+  
